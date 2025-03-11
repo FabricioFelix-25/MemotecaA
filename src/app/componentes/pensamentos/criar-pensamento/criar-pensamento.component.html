@@ -11,6 +11,9 @@
       formControlName="conteudo"
       placeholder="Digite o pensamento"
     />
+    <div class="mensagem__erro" *ngIf="fomulario.get('conteudo')?.errors?.['required'] &&  fomulario.get('conteudo')?.touched">
+      Pensamento é obrigatório!
+    </div>
     <label for="autoria">Autoria ou fonte</label>
     <input
       type="text"
@@ -19,6 +22,12 @@
       formControlName="autoria"
       placeholder="Digite a autoria ou fonte"
     />
+    <div class="mensagem__erro" *ngIf="fomulario.get('autoria')?.errors?.['required'] &&  fomulario.get('autoria')?.touched">
+      Autoria é obrigatório!
+    </div>
+    <div class="mensagem__erro" *ngIf="fomulario.get('autoria')?.errors?.['minLength']&&  fomulario.get('autoria')?.touched">
+      Autoria Precisa ter no minimo 3 caracteres.
+    </div>
     <label for="modelo">Selecione o modelo do card:</label>
     <div class="container-radio">
       <div class="radio-modelo">
@@ -37,9 +46,9 @@
         Prévia:
         <div class="modelo modelo1 ff-roboto-mono">
           <img src="../../../../assets/imagens/modelo1.png" alt="Aspas azuis" />
-          <p class="conteudo">{{fomulario.get('conteudo')?.value}}</p>
+          <p class="conteudo">{{ fomulario.get("conteudo")?.value }}</p>
           <p class="autoria">
-            <b>{{fomulario.get('autoria')?.value}}</b>
+            <b>{{ fomulario.get("autoria")?.value }}</b>
           </p>
         </div>
       </div>
@@ -63,9 +72,9 @@
             src="../../../../assets/imagens/modelo2.png"
             alt="Aspas azul claro"
           />
-          <p class="conteudo">{{fomulario.get('conteudo')?.value}}</p>
+          <p class="conteudo">{{ fomulario.get("conteudo")?.value }}</p>
           <p class="autoria">
-            <b>{{fomulario.get('autoria')?.value}}</b>
+            <b>{{ fomulario.get("autoria")?.value }}</b>
           </p>
         </div>
       </div>
@@ -89,9 +98,9 @@
             src="../../../../assets/imagens/modelo3.png"
             alt="Aspas verdes"
           />
-          <p class="conteudo">{{fomulario.get('conteudo')?.value}}</p>
+          <p class="conteudo">{{ fomulario.get("conteudo")?.value }}</p>
           <p class="autoria">
-            <b>{{fomulario.get('autoria')?.value}}</b>
+            <b>{{ fomulario.get("autoria")?.value }}</b>
           </p>
         </div>
       </div>
