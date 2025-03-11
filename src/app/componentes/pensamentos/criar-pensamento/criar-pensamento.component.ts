@@ -47,4 +47,13 @@ export class CriarPensamentoComponent implements OnInit {
     this.router.navigate(['/pensamentos'])
   }
 
+  habilitarBotao(): String {
+    if(this.fomulario.valid) {
+      return 'botao';
+    }else {
+      return 'botao__desabilitado';
+    }
+
+  }
+
 }
