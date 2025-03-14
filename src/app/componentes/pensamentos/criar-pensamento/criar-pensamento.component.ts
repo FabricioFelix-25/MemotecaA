@@ -33,10 +33,10 @@ export class CriarPensamentoComponent implements OnInit {
   }
 
   criarPensamento() {
-    console.log(this.fomulario.get('autoria')?.errors);
+
     if(this.fomulario.valid) {
       this.service.criar(this.fomulario.value).subscribe(()=> {
-        this.router.navigate(['/pensamentos'])
+        this.router.navigate(['/listarPensamento'])
       })
     }
   }
@@ -44,7 +44,7 @@ export class CriarPensamentoComponent implements OnInit {
   fomulario!: FormGroup;
 
   cancelar() {
-    this.router.navigate(['/pensamentos'])
+    this.router.navigate(['/listarPensamento'])
   }
 
   habilitarBotao(): String {
