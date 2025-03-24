@@ -13,6 +13,7 @@ export class ListarPensamentoComponent implements OnInit {
   constructor(private service: PensamentoService) {}
   paginaAtual: number = 1;
   haMaisPensamentos: boolean = true;
+  filtro: string = '';
 
   ngOnInit(): void {
     this.service.listar(this.paginaAtual).subscribe((listaPensamentos) => {
