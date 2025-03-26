@@ -11,13 +11,18 @@ private readonly API = 'http://localhost:3000/pensamentos';
 
 constructor(private http: HttpClient) { }
 
-listar(pagina: number): Observable<Pensamento[]> {
+listar(pagina: number, filtro: string): Observable<Pensamento[]> {
   const itensPorPagina = 6;
   //GET /posts?_page=7&_limit=20
 
-  let params = new  HttpParams().set('_page', pagina.toString()).set('_limit', itensPorPagina.toString());
-  //return this.http
-  //.get<Pensamento[]>(`${this.API}?_page=${pagina}&_limit=${itensPorPagina}`);
+  let params = new  HttpParams()
+  .set('_page', pagina.toString())
+  .set('_limit', itensPorPagina.toString());
+
+  if(filtro.trim().length > 2 )
+{
+  params = params.set("q", filtro)
+}
 
 
   return this.http.get<Pensamento[]>(this.API, {params});
