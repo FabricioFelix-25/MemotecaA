@@ -4,42 +4,49 @@
       "id": 1,
       "conteudo": "Que bom que vc veio",
       "autoria": "Nay",
-      "modelo": "modelo1"
+      "modelo": "modelo1",
+      "favorito": true
     },
     {
       "id": 3,
       "conteudo": "amanha trabakho",
       "autoria": "ffsd",
-      "modelo": "modelo3"
+      "modelo": "modelo3",
+      "favorito": false
     },
     {
       "conteudo": " sadasd",
       "autoria": "asdasd",
       "modelo": "modelo3",
+      "favorito": false,
       "id": 4
     },
     {
       "conteudo": " sdasdas",
       "autoria": "sadasd",
       "modelo": "modelo3",
+      "favorito": false,
       "id": 5
     },
     {
       "conteudo": " asdasda",
       "autoria": "sadasd",
       "modelo": "modelo3",
+      "favorito": false,
       "id": 6
     },
     {
       "conteudo": " asdasda",
       "autoria": "sadasd",
       "modelo": "modelo3",
+      "favorito": false,
       "id": 7
     },
     {
       "conteudo": " asdas",
       "autoria": "asdas",
       "modelo": "modelo3",
+      "favorito": false,
       "id": 8
     }
   ]
