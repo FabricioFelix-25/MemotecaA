@@ -28,6 +28,26 @@ listar(pagina: number, filtro: string): Observable<Pensamento[]> {
   return this.http.get<Pensamento[]>(this.API, {params});
 }
 
+listarPensamentosFavoritos(pagina: number, filtro: string): Observable<Pensamento[]>{
+  const itensPorPagina = 6;
+  //GET /posts?_page=7&_limit=20
+
+  let params = new  HttpParams()
+  .set('_page', pagina.toString())
+  .set('_limit', itensPorPagina.toString())
+  .set('favorito', true)
+
+
+  if(filtro.trim().length > 2 )
+{
+  params = params.set("q", filtro)
+}
+
+
+  return this.http.get<Pensamento[]>(this.API, {params});
+}
+
+
 
 criar (pensamento: Pensamento): Observable<Pensamento> {
   return this.http.post<Pensamento>(this.API, pensamento);
