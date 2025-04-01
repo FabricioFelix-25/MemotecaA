@@ -5,20 +5,13 @@
       "conteudo": "Que bom que vc veio",
       "autoria": "Nay",
       "modelo": "modelo1",
-      "favorito": true
-    },
-    {
-      "id": 3,
-      "conteudo": "amanha trabakho",
-      "autoria": "ffsd",
-      "modelo": "modelo3",
       "favorito": false
     },
     {
       "conteudo": " sadasd",
       "autoria": "asdasd",
       "modelo": "modelo3",
-      "favorito": false,
+      "favorito": true,
       "id": 4
     },
     {
@@ -32,7 +25,7 @@
       "conteudo": " asdasda",
       "autoria": "sadasd",
       "modelo": "modelo3",
-      "favorito": false,
+      "favorito": true,
       "id": 6
     },
     {
